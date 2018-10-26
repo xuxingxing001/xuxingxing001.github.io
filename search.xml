@@ -86,7 +86,7 @@
     <url>%2F2018%2F10%2F25%2FAndroid%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E5%BA%93%2F</url>
     <content type="text"><![CDATA[一款用于在滚动视图中观测滚动事件的Android库（与Material Design实现交互）：Android-ObservableScrollViewMaterial Design Music Player：TimberMaterial风格的EditText：MaterialEditTextAndroid 多主题框架：MagicaSakuraMaterialDesign图标库：material-design-iconsAndroid动画开源库：AndroidViewAnimationsDagger2：dagger2图片裁剪库：uCrop强大、可定制、易扩展的 ViewPager 指示器框架：MagicIndicator是一个方便简约的 Android 图片压缩工具库：AdvancedLubanRxJava：RxJava一套简单的api去申明android6.0以上的运行时权限：PermissionsDispatcherretrofit：retrofit仿iOS的PickerView控件，有时间选择和选项选择并支持一二三级联动效果：Android-PickerViewAndroid Material风格评分：android-material-app-rating拖拽消失气泡（类QQ消息数目拖拽消失效果）：BGABadgeView-Android爆炸效果：ExplosionField打造炫酷列表之 StickyHeaderListView：标题渐变、吸附悬浮、筛选分类、动态头部等：StickyHeaderListView实现随手势放大缩小的图片：PhotoView垂直翻页公告：MarqueeViewViewPager自动轮播器：RollViewPager开源表情键盘：XhsEmoticonsKeyboard动画库：lottie-android支持多/单图片选择和预览，单图裁剪功能（B站出品）：boxingTextView部分文字实现变颜色及可点击：Android-TextView-LinkBuilder安卓表格：smartTable安卓开源视频播放器： JiaoZiVideoPlayer安卓字体图标库：Android-Iconics验证码输入框：VerificationCodeView评分控件：MaterialRatingBar透明状态栏：ImmersionBarAndroid路由跳转：ARouter手势图形解锁：PatternLockView图像压缩：Tiny图片或视频选择：Matisse 安卓架构文章合集：AndroidArchitectureCollection]]></content>
       <categories>
-        <category>Android</category>
+        <category>android</category>
       </categories>
       <tags>
         <tag>android</tag>
