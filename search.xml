@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F10%2F26%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[maven国内阿里云镜像]]></title>
+    <url>%2F2018%2F10%2F25%2Fmaven%E5%9B%BD%E5%86%85%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%2F</url>
+    <content type="text"><![CDATA[maven确实是一个好东西，但是在国内下载官方仓库的jar却是个大问题，速度不敢恭维，现在oschina的国内maven镜像服务已关闭，无奈之下只能另寻门路。今天突然发现了阿里云maven国内镜像，修改完以后速度飞一般的感觉，超赞，这个激动啊。。。修改方法：在~/.m2目录下的settings.xml文件中，（如果该文件不存在，则需要从maven/conf目录下拷贝一份），找到标签，添加如下子标签：123456&lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt; &lt;/mirror&gt;]]></content>
+      <categories>
+        <category>构建工具</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Springboot使用jsp作为view视图]]></title>
+    <url>%2F2018%2F10%2F25%2FSpringboot%E4%BD%BF%E7%94%A8jsp%E4%BD%9C%E4%B8%BAview%E8%A7%86%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[配置springboot支持jsp添加关于jsp相关的maven支持123456789101112131415&lt;!--springboot tomcat jsp支持开启--&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt; &lt;artifactId&gt;tomcat-embed-jasper&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!--servlet支持开启--&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!--jstl支持开启--&gt; &lt;dependency&gt; &lt;groupId&gt;javax.servlet&lt;/groupId&gt; &lt;artifactId&gt;jstl&lt;/artifactId&gt; &lt;/dependency&gt; 配置视图 要想让spring-boot支持JSP，需要将项目打成war包，所以需要在pom.xml中将jar改成war 在main目录下面依次建立文件夹，webapp/WEB-INF，就这样写死 打开springboot配置文件application.yml，添加下面的视图配置12345spring: mvc: view: prefix: /WEB-INF/ suffix: .jsp 然后将jsp文件放在WEB-INF这个目录下面就可以了 好了，下面我们建立相应的IndexController和index.jsp测试一下了~]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Springboot使用freemarker作为view视图]]></title>
+    <url>%2F2018%2F10%2F25%2FSpringboot%E4%BD%BF%E7%94%A8freemarker%E4%BD%9C%E4%B8%BAview%E8%A7%86%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[添加FreeMaker依赖首先在pom.xml中添加FreeMaker的依赖1234 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-freemarker&lt;/artifactId&gt;&lt;/dependency&gt; 在application.yml中增加FreeMarker的配置12345678910spring: freemarker: allow-request-override: false cache: false check-template-location: true charset: UTF-8 content-type: text/html expose-request-attributes: false expose-session-attributes: false expose-spring-macro-helpers: false]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Springboot使用html作为view视图]]></title>
+    <url>%2F2018%2F10%2F25%2FSpringboot%E4%BD%BF%E7%94%A8html%E4%BD%9C%E4%B8%BAview%E8%A7%86%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[在pom.xml中增加thymeleaf依赖 1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;&lt;/dependency&gt; 如果你的视图不是放在/templates/下面，需要在springboot文件中更改view的视图路径 1234spring: thymeleaf: prefix: classpath:/templates suffix: .html]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Intellij IDEA 使用Spring-boot-devTools无效解决办法]]></title>
+    <url>%2F2018%2F10%2F25%2FIntellij-IDEA-%E4%BD%BF%E7%94%A8Spring-boot-devTools%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[相信大部分使用Intellij的同学都会遇到这个问题，即使项目使用了spring-boot-devtools，修改了类或者html、js等，idea还是不会自动重启，非要手动去make一下或者重启，就更没有使用热部署一样。出现这种情况，并不是你的配置问题，相信自己，热部署那几个设置很简单，其根本原因是因为Intellij IEDA和Eclipse不同，Eclipse设置了自动编译之后，修改类它会自动编译，而IDEA在非RUN或DEBUG情况下才会自动编译（前提是你已经设置了Auto-Compile）。废话这么多，怎么解决呢？请耐心往下看。首先，IDEA设置里面这里必须打勾 然后 Shift+Ctrl+Alt+/，选择Registry 进去之后，找到如下图所示的选项，打勾 ok了，重启一下项目，然后改一下类里面的内容，IDEA就会自动去make了。 转自：http://blog.csdn.net/wjc475869/article/details/52442484]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[解析Unicode字符串]]></title>
+    <url>%2F2018%2F10%2F25%2F%E8%A7%A3%E6%9E%90Unicode%E5%AD%97%E7%AC%A6%E4%B8%B2%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021222324252627282930313233343536373839404142434445464748/** * 解析unicode字符串 * @param unicodeStr * @return */ public static String readUnicodeStr(String unicodeStr) &#123; StringBuilder buf = new StringBuilder(); for (int i = 0; i &lt; unicodeStr.length(); i++) &#123; char char1 = unicodeStr.charAt(i); if (char1 == '\\' &amp;&amp; isUnicode(unicodeStr, i)) &#123; String cStr = unicodeStr.substring(i + 2, i + 6); int cInt = Integer.parseInt(cStr,16); buf.append((char) cInt); // 跨过当前unicode码，因为还有i++，所以这里i加5，而不是6 i = i + 5; &#125; else &#123; buf.append(char1); &#125; &#125; return buf.toString(); &#125; // 判断以index从i开始的串，是不是unicode码 private static boolean isUnicode(String unicodeStr, int i) &#123; int len = unicodeStr.length(); int remain = len - i; // unicode码，反斜杠后还有5个字符 uxxxx if (remain &lt; 5) return false; char flag2 = unicodeStr.charAt(i + 1); if (flag2 != 'u') return false; String nextFour = unicodeStr.substring(i + 2, i + 6); return isHexStr(nextFour); &#125; /** hex str 0-9 a-f A-F */ private static boolean isHexStr(String str) &#123; for (int i = 0; i &lt; str.length(); i++) &#123; char ch = str.charAt(i); boolean isHex = ch &gt;= '0' &amp;&amp; ch &lt;= '9' || ch &gt;= 'a' &amp;&amp; ch &lt;= 'f' || ch &gt;= 'A' &amp;&amp; ch &lt;= 'F'; if (!isHex) return false; &#125; return true; &#125; 来自：http://blog.csdn.net/shigang_xing/article/details/8263728]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[View到达顶部及底部边界判断]]></title>
+    <url>%2F2018%2F10%2F25%2FView%E5%88%B0%E8%BE%BE%E9%A1%B6%E9%83%A8%E5%8F%8A%E5%BA%95%E9%83%A8%E8%BE%B9%E7%95%8C%E5%88%A4%E6%96%AD%2F</url>
+    <content type="text"><![CDATA[判断View是否滑动到顶部1234567891011121314151617181920 /** * 判断View是否滑动到顶部 * @param view * @return */public static &lt;V extends View&gt; boolean isViewReachTopEdge(V view) &#123; if (view instanceof ViewGroup) &#123; if (view.canScrollVertically(-1)) return false; int count = ((ViewGroup)view).getChildCount(); for (int i = 0; i &lt; count; i++) &#123; if (!isViewReachTopEdge(((ViewGroup)view).getChildAt(i))) //递归子View return false; &#125; &#125; if (view.canScrollVertically(-1)) &#123; return false; &#125; return true; &#125; 判断View是否滑动到底部1234567891011121314151617181920/** * 判断View是否滑动到底部 * @param view * @return */public static &lt;V extends View&gt; boolean isViewReachBottomEdge(V view) &#123; if (view instanceof ViewGroup) &#123; if (view.canScrollVertically(1)) return false; int count = ((ViewGroup)view).getChildCount(); for (int i = 0; i &lt; count; i++) &#123; if (!isViewReachBottomEdge(((ViewGroup)view).getChildAt(i))) //递归子View return false; &#125; &#125; if (view.canScrollVertically(1)) &#123; return false; &#125; return true;&#125;]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Android Text文本的绘制]]></title>
+    <url>%2F2018%2F10%2F25%2FAndroid-Text%E6%96%87%E6%9C%AC%E7%9A%84%E7%BB%98%E5%88%B6%2F</url>
+    <content type="text"><![CDATA[文字的范围是asent的高度加上desent的高度，所以我们只要让文字上边界与top线的距离跟下边界与bottom线的距离相等即可，然后baseline的Y坐标就是文字上边界与top线的高度加上ascent的高度即可（注：baseLine以上为负，以下为正） 12345// 计算文字BaseLinePaint.FontMetricsInt fontMetrics = mPaint.getFontMetricsInt();int baseLineY = getMeasuredHeight()/2 + (fontMetrics.descent- fontMetrics.ascent)/2 -fontMetrics.descent;canvas.drawText(nameFirstChar, width / 2, textBaseY, paint);viewHolder.iv_avatar.setImageBitmap(CommonMethod.toRoundCorner(bitmap, width));]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[电商注意事项]]></title>
+    <url>%2F2018%2F10%2F25%2F%E7%94%B5%E5%95%86%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%2F</url>
+    <content type="text"><![CDATA[当一个公司在某个领域专注几年后，会越来越专业，无论是在产品、供应链上还在在应用产品上]]></content>
+      <categories>
+        <category>电商</category>
+      </categories>
+      <tags>
+        <tag>电商</tag>
+        <tag>淘宝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Android常用开源库]]></title>
+    <url>%2F2018%2F10%2F25%2FAndroid%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[一款用于在滚动视图中观测滚动事件的Android库（与Material Design实现交互）：Android-ObservableScrollViewMaterial Design Music Player：TimberMaterial风格的EditText：MaterialEditTextAndroid 多主题框架：MagicaSakuraMaterialDesign图标库：material-design-iconsAndroid动画开源库：AndroidViewAnimationsDagger2：dagger2图片裁剪库：uCrop强大、可定制、易扩展的 ViewPager 指示器框架：MagicIndicator是一个方便简约的 Android 图片压缩工具库：AdvancedLubanRxJava：RxJava一套简单的api去申明android6.0以上的运行时权限：PermissionsDispatcherretrofit：retrofit仿iOS的PickerView控件，有时间选择和选项选择并支持一二三级联动效果：Android-PickerViewAndroid Material风格评分：android-material-app-rating拖拽消失气泡（类QQ消息数目拖拽消失效果）：BGABadgeView-Android爆炸效果：ExplosionField打造炫酷列表之 StickyHeaderListView：标题渐变、吸附悬浮、筛选分类、动态头部等：StickyHeaderListView实现随手势放大缩小的图片：PhotoView垂直翻页公告：MarqueeViewViewPager自动轮播器：RollViewPager开源表情键盘：XhsEmoticonsKeyboard动画库：lottie-android支持多/单图片选择和预览，单图裁剪功能（B站出品）：boxingTextView部分文字实现变颜色及可点击：Android-TextView-LinkBuilder安卓表格：smartTable安卓开源视频播放器： JiaoZiVideoPlayer安卓字体图标库：Android-Iconics验证码输入框：VerificationCodeView评分控件：MaterialRatingBar透明状态栏：ImmersionBarAndroid路由跳转：ARouter手势图形解锁：PatternLockView图像压缩：Tiny图片或视频选择：Matisse 安卓架构文章合集：AndroidArchitectureCollection]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+        <tag>开源库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo建站教程]]></title>
+    <url>%2F2018%2F10%2F23%2Fhexo%E5%BB%BA%E7%AB%99%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[hexo建站教程]]></content>
+      <categories>
+        <category>网站</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+</search>
