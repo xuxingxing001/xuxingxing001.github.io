@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[淘宝规则]]></title>
+    <url>%2F2018%2F10%2F29%2F%E6%B7%98%E5%AE%9D%E8%A7%84%E5%88%99%2F</url>
+    <content type="text"><![CDATA[淘宝规则链接]]></content>
+      <categories>
+        <category>电商</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[电商注意点]]></title>
+    <url>%2F2018%2F10%2F27%2F%E7%94%B5%E5%95%86%E6%B3%A8%E6%84%8F%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[当一个公司在某个领域专注几年后，会越来越专业，无论是在产品、供应链上还在在应用场景上，这些就形成了核心竞争力。 现在市场上有多个平台，如淘宝网、天猫、京东、苏宁、当当网等，有的企业一开始就全渠道开展，其实这不是一个好的选择。最好的方式是先专注于某个渠道，做顺了，业务发展到一定程度，再考虑扩充其他渠道。 中国提倡中庸文化，不能太左，也不能太右。做电商也是如此，不能太死板，也不能太投机。太死板，公司很难发展；太投机，公司风险很大。 产品创新能带来直接的利润。在互联网行业，创新的成本都不高，然而一旦成功，收益很大！如何才能进行产品创新？这里有几点建议: 跨类目组合。之前讲的几个例子都是如此。 解决生活痛点。 多找外行交流。问问用户有什么异想天开的想法，外行不懂，所以敢想。 热爱你自己的产品。深度热爱自己的产品，你会有把它们用到生活中的欲望，然后会有很多创意出来。 创新是可遇不可求的事，需要每天都琢磨，一旦有想法，就赶紧去找产品人员讨论。]]></content>
+      <categories>
+        <category>电商</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F10%2F26%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
@@ -68,18 +84,6 @@
       <categories>
         <category>Android</category>
       </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[电商注意事项]]></title>
-    <url>%2F2018%2F10%2F25%2F%E7%94%B5%E5%95%86%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%2F</url>
-    <content type="text"><![CDATA[当一个公司在某个领域专注几年后，会越来越专业，无论是在产品、供应链上还在在应用产品上]]></content>
-      <categories>
-        <category>电商</category>
-      </categories>
-      <tags>
-        <tag>电商</tag>
-        <tag>淘宝</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Android常用开源库]]></title>
