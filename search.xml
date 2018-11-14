@@ -106,18 +106,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo建站教程]]></title>
-    <url>%2F2018%2F10%2F23%2Fhexo%E5%BB%BA%E7%AB%99%E6%95%99%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[hexo建站教程]]></content>
-      <categories>
-        <category>网站</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[linux服务器设置静态IP]]></title>
     <url>%2F2018%2F10%2F23%2Flinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip%2F</url>
     <content type="text"><![CDATA[centos 修改 /etc/sysconfig/network-scripts/ifcfg-eth0 123456DEVICE=eth0 #网卡对应的设备别名BOOTPROTO=static #网卡获得ip地址的方式（默认为dhcp，表示自动获取）HWADDR=00:07:E9:05:E8:B4 #网卡MAC地址（物理地址）IPADDR=192.168.100.100 #IP地址NETMASK=255.255.255.0 #子网掩码 ONBOOT=yes 重启网络配置 1service network restart ubuntu 修改 /etc/sysconfig/network-scripts/ifcfg-eth0 12345auto eth0iface eth0 inet staticaddress 192.168.3.90gateway 192.168.3.1netmask 255.255.255.0 重启网络配置 1sudo /etc/init.d/networking restart]]></content>
@@ -127,6 +115,18 @@
       <tags>
         <tag>linux</tag>
         <tag>服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo建站教程]]></title>
+    <url>%2F2018%2F10%2F23%2Fhexo%E5%BB%BA%E7%AB%99%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[hexo建站教程]]></content>
+      <categories>
+        <category>网站</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>建站</tag>
       </tags>
   </entry>
 </search>
