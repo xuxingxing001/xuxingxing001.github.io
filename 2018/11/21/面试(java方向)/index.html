@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="面试,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="原文地址：github.com/kdn251/interviews 译文出自：掘金翻译计划 译者：王下邀月熊 校对者：PhxNirvana、根号三 这个 链接 用来查看本翻译与英文版是否有差别（如果你没有看到 README.md 发生变化，那就意味着这份翻译文档是最新的）。   Interviews 软件工程技术面试个人指南。 Maintainer - Kevin Naughton Jr.">
+<meta name="keywords" content="面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试（java方向）">
+<meta property="og:url" content="http://yoursite.com/2018/11/21/面试(java方向)/index.html">
+<meta property="og:site_name" content="静候">
+<meta property="og:description" content="原文地址：github.com/kdn251/interviews 译文出自：掘金翻译计划 译者：王下邀月熊 校对者：PhxNirvana、根号三 这个 链接 用来查看本翻译与英文版是否有差别（如果你没有看到 README.md 发生变化，那就意味着这份翻译文档是最新的）。   Interviews 软件工程技术面试个人指南。 Maintainer - Kevin Naughton Jr.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542771797412.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542771818369.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542771868740.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542771891281.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542771911471.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542771925738.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542772012645.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/kdn251/interviews/master/images/quicksort.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/kdn251/interviews/master/images/mergesort.gif">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542772209214.png">
+<meta property="og:image" content="https://github.com/kdn251/interviews/raw/master/images/dfsbfs.gif?raw=true">
+<meta property="og:image" content="https://github.com/kdn251/interviews/blob/master/images/dfsbfs.gif?raw=true">
+<meta property="og:image" content="https://github.com/kdn251/interviews/blob/master/images/dijkstra.gif?raw=true">
+<meta property="og:image" content="https://github.com/kdn251/interviews/raw/master/images/bellman-ford.gif?raw=true">
+<meta property="og:image" content="https://github.com/kdn251/interviews/raw/master/images/prim.gif?raw=true">
+<meta property="og:image" content="https://github.com/kdn251/interviews/raw/master/images/kruskal.gif?raw=true">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542777256918.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542777279029.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542777295809.png">
+<meta property="og:updated_time" content="2018-11-21T05:15:32.332Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试（java方向）">
+<meta name="twitter:description" content="原文地址：github.com/kdn251/interviews 译文出自：掘金翻译计划 译者：王下邀月熊 校对者：PhxNirvana、根号三 这个 链接 用来查看本翻译与英文版是否有差别（如果你没有看到 README.md 发生变化，那就意味着这份翻译文档是最新的）。   Interviews 软件工程技术面试个人指南。 Maintainer - Kevin Naughton Jr.">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/21/面试(java方向)/images/1542771797412.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/21/面试(java方向)/">
+
+
+
+
+
+  <title>面试（java方向） | 静候</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">静候</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/面试(java方向)/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="徐兴兴">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="静候">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面试（java方向）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T11:30:22+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<ul>
+<li>原文地址：<a href="https://github.com/kdn251/interviews" target="_blank" rel="noopener">github.com/kdn251/interviews</a></li>
+<li>译文出自：<a href="https://github.com/xitu/gold-miner" target="_blank" rel="noopener">掘金翻译计划</a></li>
+<li>译者：<a href="https://github.com/wxyyxc1992" target="_blank" rel="noopener">王下邀月熊</a></li>
+<li>校对者：<a href="https://github.com/phxnirvana" target="_blank" rel="noopener">PhxNirvana</a>、<a href="https://github.com/sqrthree" target="_blank" rel="noopener">根号三</a></li>
+<li>这个 <a href="https://github.com/xitu/interviews/compare/master...kdn251:master" target="_blank" rel="noopener">链接</a> 用来查看本翻译与英文版是否有差别（如果你没有看到 README.md 发生变化，那就意味着这份翻译文档是最新的）。</li>
+</ul>
+</blockquote>
+<h1 id="Interviews"><a href="#Interviews" class="headerlink" title="Interviews"></a>Interviews</h1><blockquote>
+<p>软件工程技术面试个人指南。</p>
+<p>Maintainer - <a href="https://github.com/kdn251" target="_blank" rel="noopener">Kevin Naughton Jr.</a></p>
+</blockquote>
+<h2 id="其他语言版本"><a href="#其他语言版本" class="headerlink" title="其他语言版本"></a>其他语言版本</h2><ul>
+<li><a href="./README.md">English</a></li>
+</ul>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#在线练习">在线练习</a></li>
+<li><a href="#在线面试编程">在线面试编程</a></li>
+<li><a href="#数据结构">数据结构</a></li>
+<li><a href="#算法">算法</a></li>
+<li><a href="#位运算">位运算</a></li>
+<li><a href="#算法复杂度分析">算法复杂度分析</a></li>
+<li><a href="#视频教程">视频教程</a></li>
+<li><a href="#面试书籍">面试书籍</a></li>
+<li><a href="#计算机科学与技术资讯">计算机科学与技术资讯</a></li>
+<li><a href="#文件结构">文件结构</a></li>
+</ul>
+<h2 id="在线练习"><a href="#在线练习" class="headerlink" title="在线练习"></a>在线练习</h2><ul>
+<li><a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode</a></li>
+<li><a href="https://vjudge.net/" target="_blank" rel="noopener">Virtual Judge</a></li>
+<li><a href="https://www.careercup.com/" target="_blank" rel="noopener">CareerCup</a></li>
+<li><a href="https://www.hackerrank.com/" target="_blank" rel="noopener">HackerRank</a></li>
+<li><a href="https://codefights.com/" target="_blank" rel="noopener">CodeFights</a></li>
+<li><a href="https://open.kattis.com/" target="_blank" rel="noopener">Kattis</a></li>
+<li><a href="https://www.hackerearth.com" target="_blank" rel="noopener">HackerEarth</a></li>
+<li><a href="https://codility.com/programmers/lessons/1-iterations/" target="_blank" rel="noopener">Codility</a></li>
+<li><a href="http://codeforces.com/" target="_blank" rel="noopener">Code Forces</a></li>
+<li><a href="https://www.codechef.com/" target="_blank" rel="noopener">Code Chef</a></li>
+<li><a href="http://www.spoj.com/" target="_blank" rel="noopener">Sphere Online Judge - SPOJ</a></li>
+<li><a href="https://www.interviewbit.com/" target="_blank" rel="noopener">InterviewBit</a></li>
+</ul>
+<h2 id="在线面试编程"><a href="#在线面试编程" class="headerlink" title="在线面试编程"></a>在线面试编程</h2><ul>
+<li><a href="https://www.pramp.com/ref/gt4-cn" target="_blank" rel="noopener">Pramp</a></li>
+<li><a href="http://www.gainlo.co/#!/" target="_blank" rel="noopener">Gainlo</a></li>
+<li><a href="https://refdash.com/" target="_blank" rel="noopener">Refdash</a></li>
+<li><a href="https://www.interviewing.io/" target="_blank" rel="noopener">Interviewing.io</a></li>
+</ul>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="Linked-List"><a href="#Linked-List" class="headerlink" title="Linked List"></a>Linked List</h3><ul>
+<li>链表即是由节点（Node）组成的线性集合，每个节点可以利用指针指向其他节点。它是一种包含了多个节点的、能够用于表示序列的数据结构。</li>
+<li><strong>单向链表</strong>: 链表中的节点仅指向下一个节点，并且最后一个节点指向空。</li>
+<li><strong>双向链表</strong>: 其中每个节点具有两个指针 p、n，使得 p 指向先前节点并且 n 指向下一个节点；最后一个节点的 n 指针指向 null。</li>
+<li><strong>循环链表</strong>：每个节点指向下一个节点并且最后一个节点指向第一个节点的链表。</li>
+<li>时间复杂度:<ul>
+<li>索引: <code>O(n)</code></li>
+<li>搜索: <code>O(n)</code></li>
+<li>插入: <code>O(1)</code></li>
+<li>移除: <code>O(1)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h3><ul>
+<li>栈是元素的集合，其包含了两个基本操作：push 操作可以用于将元素压入栈，pop 操作可以将栈顶元素移除。</li>
+<li>遵循后入先出（LIFO）原则。</li>
+<li>时间复杂度:<ul>
+<li>索引: <code>O(n)</code></li>
+<li>搜索: <code>O(n)</code></li>
+<li>插入: <code>O(1)</code></li>
+<li>移除: <code>O(1)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><ul>
+<li>队列是元素的集合，其包含了两个基本操作：enqueue 操作可以用于将元素插入到队列中，而 dequeue 操作则是将元素从队列中移除。</li>
+<li>遵循先入先出原则 (FIFO)。</li>
+<li>时间复杂度:<ul>
+<li>索引: <code>O(n)</code></li>
+<li>搜索: <code>O(n)</code></li>
+<li>插入: <code>O(1)</code></li>
+<li>移除: <code>O(1)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h3><ul>
+<li>树是无向、连通的无环图。</li>
+</ul>
+<h3 id="Binary-Tree"><a href="#Binary-Tree" class="headerlink" title="Binary Tree"></a>Binary Tree</h3><ul>
+<li>二叉树即是每个节点最多包含左子节点与右子节点这两个节点的树形数据结构。</li>
+<li><strong>满二叉树</strong>: 树中的每个节点仅包含 0 或 2 个节点。</li>
+<li><strong>完美二叉树（Perfect Binary Tree）</strong>: 二叉树中的每个叶节点都拥有两个子节点，并且具有相同的高度。</li>
+<li><strong>完全二叉树</strong>: 除最后一层外，每一层上的结点数均达到最大值；在最后一层上只缺少右边的若干结点。</li>
+</ul>
+<h3 id="Binary-Search-Tree"><a href="#Binary-Search-Tree" class="headerlink" title="Binary Search Tree"></a>Binary Search Tree</h3><ul>
+<li>二叉搜索树（BST）是一种特殊的二叉树，其任何节点中的值都会大于或者等于其左子树中存储的值并且小于或者等于其右子树中存储的值。</li>
+<li>时间复杂度:<ul>
+<li>索引: <code>O(log(n))</code></li>
+<li>搜索: <code>O(log(n))</code></li>
+<li>插入: <code>O(log(n))</code></li>
+<li>删除: <code>O(log(n))</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/1542771797412.png" alt="Binary Search Tree" width="400" height="500"></p>
+<h3 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h3><ul>
+<li>字典树，又称基数树或者前缀树，能够用于存储键为字符串的动态集合或者关联数组的搜索树。树中的节点并没有直接存储关联键值，而是该节点在树中的挂载位置决定了其关联键值。某个节点的所有子节点都拥有相同的前缀，整棵树的根节点则是空字符串。</li>
+</ul>
+<p><img src="./images/1542771818369.png" alt="Alt text" title="Trie"></p>
+<h3 id="Fenwick-Tree"><a href="#Fenwick-Tree" class="headerlink" title="Fenwick Tree"></a>Fenwick Tree</h3><ul>
+<li>树状数组又称 Binary Indexed Tree，其表现形式为树，不过本质上是以数组实现。数组中的下标代表着树中的顶点，每个顶点的父节点或者子节点的下标能够通过位运算获得。数组中的每个元素包含了预计算的区间值之和，在整棵树更新的过程中同样会更新这些预计算的值。</li>
+<li>时间复杂度:<ul>
+<li>区间求值: <code>O(log(n))</code></li>
+<li>更新: <code>O(log(n))</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/1542771868740.png" alt="Alt text" title="Fenwick Tree"></p>
+<h3 id="Segment-Tree"><a href="#Segment-Tree" class="headerlink" title="Segment Tree"></a>Segment Tree</h3><ul>
+<li>线段树是用于存放间隔或者线段的树形数据结构，它允许快速的查找某一个节点在若干条线段中出现的次数.</li>
+<li>时间复杂度:<ul>
+<li>区间查询: <code>O(log(n))</code></li>
+<li>更新: <code>O(log(n))</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/1542771891281.png" alt="Alt text" title="Segment Tree"></p>
+<h3 id="Heap"><a href="#Heap" class="headerlink" title="Heap"></a>Heap</h3><ul>
+<li>堆是一种特殊的基于树的满足某些特性的数据结构，整个堆中的所有父子节点的键值都会满足相同的排序条件。堆更准确地可以分为最大堆与最小堆，在最大堆中，父节点的键值永远大于或者等于子节点的值，并且整个堆中的最大值存储于根节点；而最小堆中，父节点的键值永远小于或者等于其子节点的键值，并且整个堆中的最小值存储于根节点。</li>
+<li>时间复杂度:<ul>
+<li>访问最大值 / 最小值: <code>O(1)</code></li>
+<li>插入: <code>O(log(n))</code></li>
+<li>移除最大值 / 最小值: <code>O(log(n))</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/1542771911471.png" alt="Max Heap" width="400" height="500"></p>
+<h3 id="Hashing"><a href="#Hashing" class="headerlink" title="Hashing"></a>Hashing</h3><ul>
+<li>哈希能够将任意长度的数据映射到固定长度的数据。哈希函数返回的即是哈希值，如果两个不同的键得到相同的哈希值，即将这种现象称为碰撞。</li>
+<li><strong>Hash Map</strong>: Hash Map 是一种能够建立起键与值之间关系的数据结构，Hash Map 能够使用哈希函数将键转化为桶或者槽中的下标，从而优化对于目标值的搜索速度。</li>
+<li>碰撞解决<ul>
+<li><strong>链地址法（Separate Chaining）</strong>: 链地址法中，每个桶是相互独立的，包含了一系列索引的列表。搜索操作的时间复杂度即是搜索桶的时间（固定时间）与遍历列表的时间之和。</li>
+<li><strong>开地址法（Open Addressing）</strong>: 在开地址法中，当插入新值时，会判断该值对应的哈希桶是否存在，如果存在则根据某种算法依次选择下一个可能的位置，直到找到一个尚未被占用的地址。所谓开地址法也是指某个元素的位置并不永远由其哈希值决定。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/1542771925738.png" alt="Alt text" title="Hashing"></p>
+<h3 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h3><ul>
+<li>图是一种数据元素间为多对多关系的数据结构，加上一组基本操作构成的抽象数据类型。<ul>
+<li><strong>无向图（Undirected Graph）</strong>: 无向图具有对称的邻接矩阵，因此如果存在某条从节点 u 到节点 v 的边，反之从 v 到 u 的边也存在。</li>
+<li><strong>有向图（Directed Graph）</strong>: 有向图的邻接矩阵是非对称的，即如果存在从 u 到 v 的边并不意味着一定存在从 v 到 u 的边。</li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/1542772012645.png" alt="Graph" width="400" height="500"></p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><ul>
+<li>稳定: 否</li>
+<li>时间复杂度:<ul>
+<li>最优时间: <code>O(nlog(n))</code></li>
+<li>最坏时间: <code>O(n^2)</code></li>
+<li>平均时间: <code>O(nlog(n))</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/kdn251/interviews/master/images/quicksort.gif" alt="Alt text" title="Quicksort"></p>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><ul>
+<li>归并排序是典型的分治算法，它不断地将某个数组分为两个部分，分别对左子数组与右子数组进行排序，然后将两个数组合并为新的有序数组。</li>
+<li>稳定: 是</li>
+<li>时间复杂度:<ul>
+<li>最优时间: <code>O(nlog(n))</code></li>
+<li>最坏时间: <code>O(nlog(n))</code></li>
+<li>平均时间: <code>O(nlog(n))</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/kdn251/interviews/master/images/mergesort.gif" alt="Alt text" title="Mergesort"></p>
+<h4 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h4><ul>
+<li>桶排序将数组分到有限数量的桶子里。每个桶子再个别排序（有可能再使用别的排序算法或是以递归方式继续使用桶排序进行排序）。</li>
+<li>时间复杂度:<ul>
+<li>最优时间: <code>Ω(n + k)</code></li>
+<li>最坏时间: <code>O(n^2)</code></li>
+<li>平均时间:<code>Θ(n + k)</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="./images/1542772209214.png" alt="Alt text" title="Bucket Sort"></p>
+<h4 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h4><ul>
+<li>基数排序类似于桶排序，将数组分割到有限数目的桶中；不过其在分割之后并没有让每个桶单独地进行排序，而是直接进行了合并操作。</li>
+<li>时间复杂度:<ul>
+<li>最优时间: <code>Ω(nk)</code></li>
+<li>最坏时间: <code>O(nk)</code></li>
+<li>平均时间: <code>Θ(nk)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="图算法"><a href="#图算法" class="headerlink" title="图算法"></a>图算法</h3><h4 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h4><ul>
+<li>深度优先算法是一种优先遍历子节点而不是回溯的算法。</li>
+<li>时间复杂度: <code>O(|V| + |E|)</code></li>
+</ul>
+<p><img src="https://github.com/kdn251/interviews/raw/master/images/dfsbfs.gif?raw=true" alt="Alt text" title="DFS / BFS Traversal"></p>
+<h4 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h4><ul>
+<li>广度优先搜索是优先遍历邻居节点而不是子节点的图遍历算法。</li>
+<li>时间复杂度: <code>O(|V| + |E|)</code></li>
+</ul>
+<p><img src="https://github.com/kdn251/interviews/blob/master/images/dfsbfs.gif?raw=true" alt="Alt text" title="DFS / BFS Traversal"></p>
+<h4 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h4><ul>
+<li>拓扑排序是对于有向图节点的线性排序，如果存在某条从 u 到 v 的边，则认为 u 的下标先于 v。</li>
+<li>时间复杂度: <code>O(|V| + |E|)</code></li>
+</ul>
+<h4 id="Dijkstra-算法"><a href="#Dijkstra-算法" class="headerlink" title="Dijkstra 算法"></a>Dijkstra 算法</h4><ul>
+<li><strong>Dijkstra 算法</strong> 用于计算有向图中单源最短路径问题。</li>
+<li>时间复杂度: <code>O(|V|^2)</code></li>
+</ul>
+<p><img src="https://github.com/kdn251/interviews/blob/master/images/dijkstra.gif?raw=true" alt="Alt text" title="Dijkstra&#39;s"></p>
+<h4 id="Bellman-Ford-算法"><a href="#Bellman-Ford-算法" class="headerlink" title="Bellman-Ford 算法"></a>Bellman-Ford 算法</h4><ul>
+<li><strong>Bellman-Ford 算法</strong>是在带权图中计算从单一源点出发到其他节点的最短路径的算法。</li>
+<li>尽管算法复杂度大于 Dijkstra 算法，但是它适用于包含了负值边的图。</li>
+<li>时间复杂度:<ul>
+<li>最优时间: <code>O(|E|)</code></li>
+</ul>
+<ul>
+<li>最坏时间: <code>O(|V||E|)</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://github.com/kdn251/interviews/raw/master/images/bellman-ford.gif?raw=true" alt="Alt text" title="Bellman-Ford"></p>
+<h4 id="Floyd-Warshall-算法"><a href="#Floyd-Warshall-算法" class="headerlink" title="Floyd-Warshall 算法"></a>Floyd-Warshall 算法</h4><ul>
+<li><strong>Floyd-Warshall 算法</strong> 能够用于在无环带权图中寻找任意节点的最短路径。</li>
+<li>时间复杂度:<ul>
+<li>最优时间: <code>O(|V|^3)</code></li>
+<li>最坏时间: <code>O(|V|^3)</code></li>
+<li>平均时间: <code>O(|V|^3)</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Prim-算法"><a href="#Prim-算法" class="headerlink" title="Prim 算法"></a>Prim 算法</h4><ul>
+<li><strong>Prim 算法</strong>是用于在带权无向图中计算最小生成树的贪婪算法。换言之，Prim 算法能够在图中抽取出连接所有节点的边的最小代价子集。</li>
+<li>时间复杂度: <code>O(|V|^2)</code></li>
+</ul>
+<p><img src="https://github.com/kdn251/interviews/raw/master/images/prim.gif?raw=true" alt="Alt text" title="Prim&#39;s Algorithm"></p>
+<h4 id="Kruskal-算法"><a href="#Kruskal-算法" class="headerlink" title="Kruskal 算法"></a>Kruskal 算法</h4><ul>
+<li><strong>Kruskal 算法</strong>同样是计算图的最小生成树的算法，与 Prim 的区别在于并不需要图是连通的。</li>
+<li>时间复杂度: <code>O(|E|log|V|)</code></li>
+</ul>
+<p><img src="https://github.com/kdn251/interviews/raw/master/images/kruskal.gif?raw=true" alt="Alt text" title="Kruskal&#39;s Algorithm"></p>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><ul>
+<li>位运算即是在位级别进行操作的技术，合适的位运算能够帮助我们得到更快地运算速度与更小的内存使用。</li>
+<li>测试第 k 位: <code>s &amp; (1 &lt;&lt; k)</code></li>
+<li>设置第 k 位: <code>s |= (1 &lt;&lt; k)</code></li>
+<li>第 k 位置零: <code>s &amp;= ~(1 &lt;&lt; k)</code></li>
+<li>切换第 k 位值: <code>s ^= ~(1 &lt;&lt; k)</code></li>
+<li>乘以 2<sup>n</sup>: <code>s &lt;&lt; n</code></li>
+<li>除以 2<sup>n</sup>: <code>s &gt;&gt; n</code></li>
+<li>交集: <code>s &amp; t</code></li>
+<li>并集: <code>s | t</code></li>
+<li>减法: <code>s &amp; ~t</code></li>
+<li>交换 <code>x = x ^ y ^ (y = x)</code></li>
+<li>取出最小非 0 位（Extract lowest set bit）: <code>s &amp; (-s)</code></li>
+<li>取出最小 0 位（Extract lowest unset bit）: <code>~s &amp; (s + 1)</code></li>
+<li>交换值:<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x ^= y;</span><br><span class="line">y ^= x;</span><br><span class="line">x ^= y;</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+<h2 id="算法复杂度分析"><a href="#算法复杂度分析" class="headerlink" title="算法复杂度分析"></a>算法复杂度分析</h2><h4 id="大-O-表示"><a href="#大-O-表示" class="headerlink" title="大 O 表示"></a>大 O 表示</h4><ul>
+<li><strong>大 O 表示</strong> 用于表示某个算法的上限，往往用于描述最坏的情况。</li>
+</ul>
+<p><img src="./images/1542777256918.png" alt="Alt text" title="Theta Notation"></p>
+<h4 id="小-O-表示"><a href="#小-O-表示" class="headerlink" title="小 O 表示"></a>小 O 表示</h4><ul>
+<li><strong>小 O 表示</strong>用于描述某个算法的渐进上界，不过二者要更为紧密。</li>
+</ul>
+<h4 id="大-Ω-表示"><a href="#大-Ω-表示" class="headerlink" title="大 Ω 表示"></a>大 Ω 表示</h4><ul>
+<li><strong>大 Ω 表示</strong>用于描述某个算法的渐进下界。</li>
+</ul>
+<p><img src="./images/1542777279029.png" alt="Alt text" title="Theta Notation"></p>
+<h4 id="小-ω-表示"><a href="#小-ω-表示" class="headerlink" title="小 ω 表示"></a>小 ω 表示</h4><ul>
+<li><strong>Little Omega Notation</strong>用于描述某个特定算法的下界，不过不一定很靠近。</li>
+</ul>
+<h4 id="Theta-Θ-表示"><a href="#Theta-Θ-表示" class="headerlink" title="Theta Θ 表示"></a>Theta Θ 表示</h4><ul>
+<li><strong>Theta Notation</strong>用于描述某个确定算法的确界。</li>
+</ul>
+<p><img src="./images/1542777295809.png" alt="Alt text" title="Theta Notation"></p>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><ul>
+<li>Data Structures<ul>
+<li><a href="https://www.youtube.com/watch?v=mFPmKGIrQs4&amp;index=1&amp;list=PL-XXv-cvA_iAlnI-BQr9hjqADPBtujFJd" target="_blank" rel="noopener">UC Berkeley Data Structures</a></li>
+<li><a href="https://www.youtube.com/watch?v=T0yzrZL1py0&amp;list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf&amp;index=1" target="_blank" rel="noopener">MIT Advanced Data Structures</a></li>
+</ul>
+</li>
+<li>Algorithms<ul>
+<li><a href="https://www.youtube.com/watch?v=HtSuA80QTyo&amp;list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&amp;index=1" target="_blank" rel="noopener">MIT Introduction to Algorithms</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL6ogFv-ieghdoGKGg2Bik3Gl1glBTEu8c" target="_blank" rel="noopener">MIT Advanced Algorithms</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="面试书籍"><a href="#面试书籍" class="headerlink" title="面试书籍"></a>面试书籍</h2><ul>
+<li>Competitive Programming 3 - Steven Halim &amp; Felix Halim</li>
+<li>Cracking The Coding Interview - Gayle Laakmann McDowell</li>
+<li>Cracking The PM Interview - Gayle Laakmann McDowell &amp; Jackie Bavaro</li>
+</ul>
+<h2 id="计算机科学与技术资讯"><a href="#计算机科学与技术资讯" class="headerlink" title="计算机科学与技术资讯"></a>计算机科学与技术资讯</h2><ul>
+<li><a href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a></li>
+<li><a href="https://lobste.rs/" target="_blank" rel="noopener">Lobsters</a></li>
+</ul>
+<h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── Array</span><br><span class="line">│   ├── bestTimeToBuyAndSellStock.java</span><br><span class="line">│   ├── findTheCelebrity.java</span><br><span class="line">│   ├── gameOfLife.java</span><br><span class="line">│   ├── increasingTripletSubsequence.java</span><br><span class="line">│   ├── insertInterval.java</span><br><span class="line">│   ├── longestConsecutiveSequence.java</span><br><span class="line">│   ├── maximumProductSubarray.java</span><br><span class="line">│   ├── maximumSubarray.java</span><br><span class="line">│   ├── mergeIntervals.java</span><br><span class="line">│   ├── missingRanges.java</span><br><span class="line">│   ├── productOfArrayExceptSelf.java</span><br><span class="line">│   ├── rotateImage.java</span><br><span class="line">│   ├── searchInRotatedSortedArray.java</span><br><span class="line">│   ├── spiralMatrixII.java</span><br><span class="line">│   ├── subsetsII.java</span><br><span class="line">│   ├── subsets.java</span><br><span class="line">│   ├── summaryRanges.java</span><br><span class="line">│   ├── wiggleSort.java</span><br><span class="line">│   └── wordSearch.java</span><br><span class="line">├── Backtracking</span><br><span class="line">│   ├── androidUnlockPatterns.java</span><br><span class="line">│   ├── generalizedAbbreviation.java</span><br><span class="line">│   └── letterCombinationsOfAPhoneNumber.java</span><br><span class="line">├── BinarySearch</span><br><span class="line">│   ├── closestBinarySearchTreeValue.java</span><br><span class="line">│   ├── firstBadVersion.java</span><br><span class="line">│   ├── guessNumberHigherOrLower.java</span><br><span class="line">│   ├── pow(x,n).java</span><br><span class="line">│   └── sqrt(x).java</span><br><span class="line">├── BitManipulation</span><br><span class="line">│   ├── binaryWatch.java</span><br><span class="line">│   ├── countingBits.java</span><br><span class="line">│   ├── hammingDistance.java</span><br><span class="line">│   ├── maximumProductOfWordLengths.java</span><br><span class="line">│   ├── numberOf1Bits.java</span><br><span class="line">│   ├── sumOfTwoIntegers.java</span><br><span class="line">│   └── utf-8Validation.java</span><br><span class="line">├── BreadthFirstSearch</span><br><span class="line">│   ├── binaryTreeLevelOrderTraversal.java</span><br><span class="line">│   ├── cloneGraph.java</span><br><span class="line">│   ├── pacificAtlanticWaterFlow.java</span><br><span class="line">│   ├── removeInvalidParentheses.java</span><br><span class="line">│   ├── shortestDistanceFromAllBuildings.java</span><br><span class="line">│   ├── symmetricTree.java</span><br><span class="line">│   └── wallsAndGates.java</span><br><span class="line">├── DepthFirstSearch</span><br><span class="line">│   ├── balancedBinaryTree.java</span><br><span class="line">│   ├── battleshipsInABoard.java</span><br><span class="line">│   ├── convertSortedArrayToBinarySearchTree.java</span><br><span class="line">│   ├── maximumDepthOfABinaryTree.java</span><br><span class="line">│   ├── numberOfIslands.java</span><br><span class="line">│   ├── populatingNextRightPointersInEachNode.java</span><br><span class="line">│   └── sameTree.java</span><br><span class="line">├── Design</span><br><span class="line">│   └── zigzagIterator.java</span><br><span class="line">├── DivideAndConquer</span><br><span class="line">│   ├── expressionAddOperators.java</span><br><span class="line">│   └── kthLargestElementInAnArray.java</span><br><span class="line">├── DynamicProgramming</span><br><span class="line">│   ├── bombEnemy.java</span><br><span class="line">│   ├── climbingStairs.java</span><br><span class="line">│   ├── combinationSumIV.java</span><br><span class="line">│   ├── countingBits.java</span><br><span class="line">│   ├── editDistance.java</span><br><span class="line">│   ├── houseRobber.java</span><br><span class="line">│   ├── paintFence.java</span><br><span class="line">│   ├── paintHouseII.java</span><br><span class="line">│   ├── regularExpressionMatching.java</span><br><span class="line">│   ├── sentenceScreenFitting.java</span><br><span class="line">│   ├── uniqueBinarySearchTrees.java</span><br><span class="line">│   └── wordBreak.java</span><br><span class="line">├── HashTable</span><br><span class="line">│   ├── binaryTreeVerticalOrderTraversal.java</span><br><span class="line">│   ├── findTheDifference.java</span><br><span class="line">│   ├── groupAnagrams.java</span><br><span class="line">│   ├── groupShiftedStrings.java</span><br><span class="line">│   ├── islandPerimeter.java</span><br><span class="line">│   ├── loggerRateLimiter.java</span><br><span class="line">│   ├── maximumSizeSubarraySumEqualsK.java</span><br><span class="line">│   ├── minimumWindowSubstring.java</span><br><span class="line">│   ├── sparseMatrixMultiplication.java</span><br><span class="line">│   ├── strobogrammaticNumber.java</span><br><span class="line">│   ├── twoSum.java</span><br><span class="line">│   └── uniqueWordAbbreviation.java</span><br><span class="line">├── LinkedList</span><br><span class="line">│   ├── addTwoNumbers.java</span><br><span class="line">│   ├── deleteNodeInALinkedList.java</span><br><span class="line">│   ├── mergeKSortedLists.java</span><br><span class="line">│   ├── palindromeLinkedList.java</span><br><span class="line">│   ├── plusOneLinkedList.java</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   └── reverseLinkedList.java</span><br><span class="line">├── Queue</span><br><span class="line">│   └── movingAverageFromDataStream.java</span><br><span class="line">├── README.md</span><br><span class="line">├── Sort</span><br><span class="line">│   ├── meetingRoomsII.java</span><br><span class="line">│   └── meetingRooms.java</span><br><span class="line">├── Stack</span><br><span class="line">│   ├── binarySearchTreeIterator.java</span><br><span class="line">│   ├── decodeString.java</span><br><span class="line">│   ├── flattenNestedListIterator.java</span><br><span class="line">│   └── trappingRainWater.java</span><br><span class="line">├── String</span><br><span class="line">│   ├── addBinary.java</span><br><span class="line">│   ├── countAndSay.java</span><br><span class="line">│   ├── decodeWays.java</span><br><span class="line">│   ├── editDistance.java</span><br><span class="line">│   ├── integerToEnglishWords.java</span><br><span class="line">│   ├── longestPalindrome.java</span><br><span class="line">│   ├── longestSubstringWithAtMostKDistinctCharacters.java</span><br><span class="line">│   ├── minimumWindowSubstring.java</span><br><span class="line">│   ├── multiplyString.java</span><br><span class="line">│   ├── oneEditDistance.java</span><br><span class="line">│   ├── palindromePermutation.java</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   ├── reverseVowelsOfAString.java</span><br><span class="line">│   ├── romanToInteger.java</span><br><span class="line">│   ├── validPalindrome.java</span><br><span class="line">│   └── validParentheses.java</span><br><span class="line">├── Tree</span><br><span class="line">│   ├── binaryTreeMaximumPathSum.java</span><br><span class="line">│   ├── binaryTreePaths.java</span><br><span class="line">│   ├── inorderSuccessorInBST.java</span><br><span class="line">│   ├── invertBinaryTree.java</span><br><span class="line">│   ├── lowestCommonAncestorOfABinaryTree.java</span><br><span class="line">│   ├── sumOfLeftLeaves.java</span><br><span class="line">│   └── validateBinarySearchTree.java</span><br><span class="line">├── Trie</span><br><span class="line">│   ├── addAndSearchWordDataStructureDesign.java</span><br><span class="line">│   ├── implementTrie.java</span><br><span class="line">│   └── wordSquares.java</span><br><span class="line">└── TwoPointers</span><br><span class="line">    ├── 3Sum.java</span><br><span class="line">    ├── 3SumSmaller.java</span><br><span class="line">    ├── mergeSortedArray.java</span><br><span class="line">    ├── minimumSizeSubarraySum.java</span><br><span class="line">    ├── moveZeros.java</span><br><span class="line">    ├── removeDuplicatesFromSortedArray.java</span><br><span class="line">    ├── reverseString.java</span><br><span class="line">    └── sortColors.java</span><br><span class="line"></span><br><span class="line">18 directories, 124 files</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试/" rel="tag"># 面试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/07/奇趣阁/" rel="next" title="奇趣阁">
+                <i class="fa fa-chevron-left"></i> 奇趣阁
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">徐兴兴</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.xuxingxing.xyz/" title="个人主页" target="_blank">个人主页</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Interviews"><span class="nav-number">1.</span> <span class="nav-text">Interviews</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#其他语言版本"><span class="nav-number">1.1.</span> <span class="nav-text">其他语言版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.2.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在线练习"><span class="nav-number">1.3.</span> <span class="nav-text">在线练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在线面试编程"><span class="nav-number">1.4.</span> <span class="nav-text">在线面试编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构"><span class="nav-number">1.5.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linked-List"><span class="nav-number">1.5.1.</span> <span class="nav-text">Linked List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack"><span class="nav-number">1.5.2.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Queue"><span class="nav-number">1.5.3.</span> <span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tree"><span class="nav-number">1.5.4.</span> <span class="nav-text">Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binary-Tree"><span class="nav-number">1.5.5.</span> <span class="nav-text">Binary Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binary-Search-Tree"><span class="nav-number">1.5.6.</span> <span class="nav-text">Binary Search Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trie"><span class="nav-number">1.5.7.</span> <span class="nav-text">Trie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fenwick-Tree"><span class="nav-number">1.5.8.</span> <span class="nav-text">Fenwick Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Segment-Tree"><span class="nav-number">1.5.9.</span> <span class="nav-text">Segment Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Heap"><span class="nav-number">1.5.10.</span> <span class="nav-text">Heap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hashing"><span class="nav-number">1.5.11.</span> <span class="nav-text">Hashing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Graph"><span class="nav-number">1.5.12.</span> <span class="nav-text">Graph</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.6.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">1.6.1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速排序"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归并排序"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#桶排序"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">桶排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基数排序"><span class="nav-number">1.6.1.4.</span> <span class="nav-text">基数排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图算法"><span class="nav-number">1.6.2.</span> <span class="nav-text">图算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深度优先搜索"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">深度优先搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#广度优先搜索"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">广度优先搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓扑排序"><span class="nav-number">1.6.2.3.</span> <span class="nav-text">拓扑排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dijkstra-算法"><span class="nav-number">1.6.2.4.</span> <span class="nav-text">Dijkstra 算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bellman-Ford-算法"><span class="nav-number">1.6.2.5.</span> <span class="nav-text">Bellman-Ford 算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Floyd-Warshall-算法"><span class="nav-number">1.6.2.6.</span> <span class="nav-text">Floyd-Warshall 算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prim-算法"><span class="nav-number">1.6.2.7.</span> <span class="nav-text">Prim 算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Kruskal-算法"><span class="nav-number">1.6.2.8.</span> <span class="nav-text">Kruskal 算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算"><span class="nav-number">1.7.</span> <span class="nav-text">位运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法复杂度分析"><span class="nav-number">1.8.</span> <span class="nav-text">算法复杂度分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#大-O-表示"><span class="nav-number">1.8.0.1.</span> <span class="nav-text">大 O 表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小-O-表示"><span class="nav-number">1.8.0.2.</span> <span class="nav-text">小 O 表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大-Ω-表示"><span class="nav-number">1.8.0.3.</span> <span class="nav-text">大 Ω 表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小-ω-表示"><span class="nav-number">1.8.0.4.</span> <span class="nav-text">小 ω 表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Theta-Θ-表示"><span class="nav-number">1.8.0.5.</span> <span class="nav-text">Theta Θ 表示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频教程"><span class="nav-number">1.9.</span> <span class="nav-text">视频教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试书籍"><span class="nav-number">1.10.</span> <span class="nav-text">面试书籍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机科学与技术资讯"><span class="nav-number">1.11.</span> <span class="nav-text">计算机科学与技术资讯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件结构"><span class="nav-number">1.12.</span> <span class="nav-text">文件结构</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">徐兴兴</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
